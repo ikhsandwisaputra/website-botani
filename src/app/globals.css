@@ -24,3 +24,65 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Styling kustom untuk panah navigasi Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #f59e0b !important; /* Warna kuning dari tema kita */
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+/* Styling kustom untuk titik pagination Swiper */
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5) !important;
+    width: 10px !important;
+    height: 10px !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f59e0b !important; /* Warna kuning dari tema kita */
+    width: 25px !important;
+    border-radius: 5px !important;
+}
+
+@layer utilities {
+  /* Kelas utilitas untuk animasi marquee */
+  .animate-scroll {
+      /* Durasinya 30s. Ubah nilai ini untuk mempercepat atau memperlambat. */
+      animation: scroll 30s linear infinite;
+  }
+
+  /* Opsi untuk menghentikan animasi saat di-hover */
+  .paused {
+      animation-play-state: paused;
+  }
+}
+
+/* Definisi keyframes untuk animasi 'scroll' */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      /* translateX(-50%) karena kita punya DUA set logo.
+         Animasi berhenti setelah set pertama selesai digulir. */
+      transform: translateX(-50%);
+  }
+}
