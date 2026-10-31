@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                     <div className='w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0'>
                         {/* 2. Warna Teks Diubah Menjadi Putih */}
                         <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight shadow-sm'>
-                            Leafy Beauties For Every Space.
+                          Find You Lovely Planst Today.
                         </h1>
                         <p className='mt-4 text-lg text-gray-200 max-w-xl mx-auto lg:mx-0'>
                             Discover a wide range of beautiful and healthy
